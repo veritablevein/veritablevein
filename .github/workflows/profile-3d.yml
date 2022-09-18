@@ -1,0 +1,45 @@
+name: Generate Profiles
+
+on:
+  schedule:
+    - cron: "0 16 * * 0"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate Snake
+        uses: Platane/snk@v2
+        id: snake-gif
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake/github-snake.svg
+            dist/snake/github-snake-dark.svg?palette=github-dark
+            dist/snake/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+      - name: Push to GitHub
+        uses: EndBug/add-and-commit@v7.2.1
+        with:
+          branch: main
+          message: "Generate Contribution Snake"
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env: # default use ${{ secrets.SUMMARY_GITHUB_TOKEN }}, you should replace with your personal access token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          # UTC_OFFSET is optional, default to zero
+          UTC_OFFSET: 8
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & Push
+        run: |
+          git config user.name veritablevein
+          git config user.email veritablevein@gmail.com
+          git add -A .
+          git commit -m "Updated Github Profiles"
+          git push
