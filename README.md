@@ -35,8 +35,8 @@
 <!-- summary -->
 <h2>📈 Trending</h2>
 <div align="center">
-<img style="float:center;;height:150px" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=veritablevein&theme=tokyonight" alt="Trending">
-<img style="height:150px" src="https://github-stats.liuli.lol/api?username=veritablevein&theme=vue-dark&show_icons=true&include_all_commits=true&count_private=true">
+<img style="float:center;;height:130px" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=veritablevein&theme=tokyonight" alt="Trending">
+<img style="height:130px" src="https://github-stats.liuli.lol/api?username=veritablevein&theme=vue-dark&show_icons=true&include_all_commits=true&count_private=true">
 </div>
 
 <!-- repo -->
