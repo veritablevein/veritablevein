@@ -54,5 +54,5 @@
 <h2>☕ Recent Activities</h2>
 </div>
 
-![profile-3d-contrib light](profile-3d-contrib/profile-night-rainbow.svg#gh-light-mode-only)
+![profile-3d-contrib light](profile-3d-contrib/profile-gitblock.svg#gh-light-mode-only)
 ![profile-3d-contrib dark](profile-3d-contrib/profile-night-rainbow.svg#gh-dark-mode-only)
