@@ -28,7 +28,7 @@
 </div>
 
 <div align="center">
-<img src="https://komarev.com/ghpvc/?username=veritablevein&color=blueviolet&style=flat-square&label=🪐 Nice+To+Meet+U">
+<img src="https://komarev.com/ghpvc/?username=veritablevein&color=blueviolet&style=flat-square&label=🎉Nice+To+Meet+U">
 
 </div>
 
